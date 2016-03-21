@@ -50,11 +50,8 @@ public class WebServicePOST extends AsyncTask<String, String, String> {
             result = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
-                Log.e("While", line);
                 result.append(line);
             }
-
-            Log.e("JSON Parser", "result: " + result.toString());
 
             conn.disconnect();
         } catch (Exception e) {

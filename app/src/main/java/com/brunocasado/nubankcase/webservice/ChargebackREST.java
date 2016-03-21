@@ -18,7 +18,6 @@ public class ChargebackREST {
     public static Chargeback getChargeback(String URL) throws Exception{
 
         HttpURLConnection resposta = new WebServiceGet().doInBackground(URL);
-        Log.e("ChargebackREST: Get", "Code: " + resposta.getResponseCode());
         if (resposta.getResponseCode() == 200){
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(resposta.getInputStream()));
@@ -30,7 +29,6 @@ public class ChargebackREST {
             }
 
             in.close();
-            Log.e("ChargebackREST", response.toString());
 
             Gson gson = new Gson();
             Chargeback chargeback = gson.fromJson(response.toString(), Chargeback.class);

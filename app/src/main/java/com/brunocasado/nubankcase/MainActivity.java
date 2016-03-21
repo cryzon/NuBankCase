@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 strPrimaryAction = notice.getPrimary_action().get("title");
                 strSecondaryAction = notice.getSecondary_action().get("title");
                 URL = notice.getLinks().get("chargeback").get("href");
-                Log.e("URL", URL);
             } catch (NullPointerException e){
                 e.printStackTrace();
             }

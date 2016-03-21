@@ -42,7 +42,6 @@ public class ChargebackActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String URL = intent.getStringExtra("URL");
-        Log.e("ChargebackActivity", URL);
 
         Chargeback chargeback = null;
 
@@ -92,7 +91,6 @@ public class ChargebackActivity extends AppCompatActivity {
                 textReconhece.setText(Html.fromHtml(chargeback.getReason_details().get(0).valueAt(1).toString()));
                 textCartaoEmMaos.setText(Html.fromHtml(chargeback.getReason_details().get(1).valueAt(1).toString()));
                 if (chargeback.isAutoblock()){
-                    Log.e("Autoblock", "Entrou Autoblock");
                     imageLock.setImageResource(R.drawable.chargeback_lock);
                     switchReconhece.setChecked(true);
                     switchCartaoEmMaos.setChecked(true);

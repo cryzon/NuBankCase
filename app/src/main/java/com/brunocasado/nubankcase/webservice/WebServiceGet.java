@@ -16,7 +16,6 @@ public class WebServiceGet extends AsyncTask<String, String, HttpURLConnection> 
 
     @Override
     protected HttpURLConnection doInBackground(String... params) {
-        Log.e("Entrou", "Get");
         URL reqURL = null;
         HttpURLConnection request = null;
         try {

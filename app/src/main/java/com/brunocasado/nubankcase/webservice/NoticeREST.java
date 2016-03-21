@@ -19,7 +19,6 @@ public class NoticeREST {
 
     public static Notice getNotice() throws Exception{
         HttpURLConnection resposta = new WebServiceGet().doInBackground(URL_WS);
-        Log.e("NoticeREST", "Code: "+resposta.getResponseCode());
         if (resposta.getResponseCode() == 200){
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(resposta.getInputStream()));
@@ -31,7 +30,6 @@ public class NoticeREST {
             }
 
             in.close();
-            Log.e("NoticeREST", response.toString());
 
             Gson gson = new Gson();
             Notice notice = gson.fromJson(response.toString(), Notice.class);
