@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/background"
+    tools:context=".ChargebackActivity"
+    tools:showIn="@layout/activity_chargeback">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/textViewChargebackTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Não reconheço esta compra"
+            android:paddingBottom="20dp"
+            android:paddingTop="10dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:background="@color/background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewChargebackLock"
+            android:background="@drawable/chargeback_unlock"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/textViewChargebackDescription"
+            android:paddingLeft="10dp"
+            android:text="Bloqueamos preventivamente o seu cartão"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:background="@color/background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/textViewReconhece"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchReconehce"
+            android:layout_weight="2"
+            android:showText="true"
+            android:textOn="sim"
+            android:textOff="não"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/textViewCartaoEmMaos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchCartaoEmMaos"
+            android:layout_weight="2"
+            android:showText="true"
+            android:textOn="sim"
+            android:textOff="não"/>
+
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:background="@color/background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewCommentHint"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:background="@color/background">
+        <Button
+            android:id="@+id/buttonCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_weight="2"
+            android:background="@color/background"
+            android:textColor="@color/close_gray"/>
+
+        <Button
+            android:id="@+id/buttonContestar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contestar"
+            android:layout_weight="2"
+            android:background="@color/background"
+            android:textColor="@color/disabled_gray"/>
+    </LinearLayout>
+
+</TableLayout>

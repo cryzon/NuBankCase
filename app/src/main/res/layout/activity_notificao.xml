@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingTop="60dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="60dp"
+    android:layout_height="match_parent"
+    android:background="@color/close_gray">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="30dp"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNotifiationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contestação de compra recebida"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewNotificationDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fique de olho no seu email! Nos próximos 3 dias
+            você deverá receber um primeiro retorno sobre a sua contestação"
+            android:gravity="center"
+            android:paddingTop="16dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
